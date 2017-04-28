@@ -1,0 +1,46 @@
+﻿#box{
+	background-color: #aaa;
+	height:115px;
+	padding:5px;
+	margin-top:-10px;
+	width:300px;
+	border:1px solid #000;
+	border-radius: 8px;
+	color:#fff;
+	font-family:'Myriad Pro',Arial,Helvetica,sans-serif;
+}
+
+#box>ul{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+
+#box>ul>li{
+	margin: 7px 12px;
+}
+
+
+#box>ul>li>a{
+	text-decoration: none;
+	list-style: none;
+	color: #fff;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.button{
+    width: 20px;
+    height: 20px;
+ }
+     
+.button, .button:visited{
+	padding: 0;  
+	text-decoration: none;
+	font-weight:bold;
+	cursor: pointer;
+}

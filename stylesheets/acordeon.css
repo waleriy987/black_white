@@ -1,0 +1,105 @@
+.accordion {
+  max-width: 265px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+/*.accordion_item {
+  border-bottom: 1px solid #5a95fd;
+}*/
+/*.accordion_item:last-of-type {
+  border-bottom: none;
+}*/
+/**
+* Элемент label который запускает открыть/закрыть.
+*/
+.accordion_trigger {
+  display: block;
+  background-color: #fff;
+  color: #000;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 1.2em;
+}
+ 
+/* меняем цвет фона у активного переключателя */
+ 
+.accordion_toggle:checked ~ .accordion_trigger {
+  background-color: #fff;
+}
+ 
+/**
+ * эти элементы radio/checkbox всегда должны быть скрыты.
+ */
+.accordion_toggle {
+  position: absolute;
+  display: none;
+}
+/**
+* скрытое содержание аккордеона.
+*/
+.accordion_target {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  background-color: #fff;
+}
+
+.accordion_target>a{
+    text-decoration: none;
+    padding-left: 12px;
+    color: #000;
+    background: url(../images/marker_grey.png) no-repeat;
+}
+
+
+
+.accordion_target>a>span{
+    color: #f00;   
+}
+
+.accordion_trigger>span{
+  color: #f00;
+}
+
+#traveling_one,
+#traveling_two{
+  color: #EA61B2;
+  text-decoration: underline;
+}
+/**
+* когда переключатель checked на radio/checkbox, показать содержимое аккордеона.
+*/    
+.accordion_toggle:checked ~ .accordion_target {
+  position: static;
+  overflow: visible;
+  clip: auto;
+  margin: auto;
+  padding: 1.2rem;
+  width: auto;
+  height: auto;
+  margin-top: -20px;
+/* задержка появления  функция анимации */
+  -webkit-animation:fadeIn ease-in 0.5s; 
+  -moz-animation:fadeIn ease-in 0.5s;
+  animation:fadeIn ease-in 0.5s; 
+}
+/* анимация при появлении блоков с содержанием */
+@-moz-keyframes fadeIn {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
